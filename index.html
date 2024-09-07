@@ -4,9 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multilingual Dictionary</title>
-    <link src="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+<<<<<<< HEAD
+    <div class="container">
+      <h1><i class="fa-solid fa-language icon"></i> MULTILINGUAL DICTIONARY</h1>
+      <div class="input-group">
+        <input type="text" id="wordInput" placeholder="Enter a word" />
+
+        <select id="languageSelect">
+          <option value="en">en English</option>
+          <option value="hi">hi Hindi</option>
+          <option value="mr">mr Marathi</option>
+          <option value="es">es Spanish</option>
+          <option value="fr">fr French</option>
+          <option value="de">de German</option>
+          <option value="ja">ja Japanese</option>
+          <option value="ko">ko Korean</option>
+        </select>
+
+        <button id="microphoneBTN" onclick="toggleSpeechRecognition()">
+          <i class="fas fa-microphone icon"></i>
+          <span class="mic-text"> Speak now</span>
+        </button>
+      </div>
+
+      <button onclick="searchWords()">
+        <i class="fas fa-search icon"></i>Search
+      </button>
+      <div id="result"></div>
+    </div>
+
+    <div id="speechModal" class="speech-modal">
+      <div class="speech-modal-content">
+        <div class="speech-modal-header">
+          <h2>Speak now</h2>
+          <button id="closeModalBtn" onclick="closeSpeechModal()">
+            &times;
+          </button>
+        </div>
+        <div class="speech-modal-body"><p>listening...</p></div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+=======
     <h1>Search a word here</h1>
   </body>
+>>>>>>> 0b6e543ba623af350ab9201649dcf71471548afd
 </html>

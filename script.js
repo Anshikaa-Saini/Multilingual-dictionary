@@ -1,8 +1,8 @@
 const dictionaryApiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const translateApiUrl = "https://api.mymemory.translated.net/get";
-let lastSearchedWord = "";
+let lastSearchedWord = " ";
 
-async function searchWord() {
+async function searchWords() {
   const wordInput = document.getElementById("wordInput");
   const languageSelect = document.getElementById("languageSelect");
   const resultDiv = document.getElementById("result");
@@ -50,7 +50,7 @@ async function searchWord() {
           meaning.definitions.forEach((def, defIndex) => {
             result += `  ${defIndex + 1}. ${def.definition}\n`;
             if (def.example) {
-              result += `     Example: ${def.example}\n`;
+              result += ` Example: ${def.example}\n`;
             }
           });
           result += "\n";
